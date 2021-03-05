@@ -1,0 +1,55 @@
+{
+    "name": "anthony-dee/make-controller-expanded",
+    "description": "A collection of artisan commands that expands upon Laravel's make:controller functionality",
+    "keywords": [
+        "anthony-dee",
+        "make-controller-expanded"
+    ],
+    "homepage": "https://github.com/anthony-dee/make-controller-expanded",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Anthony Douglas",
+            "email": "anthonydouglas525@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^6.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "AnthonyDee\\MakeControllerExpanded\\": "/src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "AnthonyDee\\MakeControllerExpanded\\Tests\\": "tests"
+        }
+    },
+    "minimum-stability": "dev",
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AnthonyDee\\MakeControllerExpanded\\MakeControllerExpandedServiceProvider"
+            ],
+            "aliases": {
+                "MakeControllerExpanded": "AnthonyDee\\MakeControllerExpanded\\MakeControllerExpandedFacade"
+            }
+        }
+    }
+}
